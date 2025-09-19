@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) --> Mak Gumpf
+- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) --> gumpf.6
+- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment --> 9/19/2025 @1:50pm
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -29,8 +27,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +48,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +60,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +98,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+My career goal is to become an AI researcher, hopefully for a tech company. I am planning on going to graduate school in hopes to reach this goal. Also I am minoring in Japanese. I am planning to take the JLPT(japanese proficency test) all the way up to the hardest level which is N1. So I prepare for these test outside of class. I am in the AI club where I am also doing an AI computer vision project. I am currently looking research in AI here at OSU. Currently, I work at Curl Market.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -131,8 +115,6 @@ etc. Make of this whatever seems interesting to you, and keep in mind that
 you're just brainstorming right now. You do not have to commit to anything.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -200,68 +182,96 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Artifical Neuron
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Model focuses on the weight of a neuron for a nerual network. Kernel focuses on inspecting and replacing a single weight, return size.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - int dimensions()- reports number of weights
+    - double getWeight(int i)- reports weight at i
+    - void setWeight(int i, double weight)- set weight at i
+    - double getBias()- reports current bias
+    - void setBias() - set the bias
+    - double newinput(double[] x) - computes linear equation mx + b. m would be weight
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - double predictLinear(double[] x)- returns netInputs(x).
+    - void zero()- set all weights to 0
+    - void randomize(double min, double max) - set each weight and bias to a random value between the min and max.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - yes because we are changing the weight constantly
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I'm not sure.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No.... I'm pretty sure.....
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, predictLinear calls netInput and zero methods.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Music Playlist
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models an ordered list of songs or a playlist.
+    - kernel lets you query the size and read and replaces one song by index and push pop at the end.
+    - Secondary methods search, insert/remove at any position, move, shuffle are built from the kernel.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - int size() - reports the number of songs in the playlist
+    - Song get(int i) - reports the song at position i
+    - Song set(int i, Song s) - replaces the song at i with s, returning the previous song.
+    - void addLast(Song s) - appends s at the end
+    - Song removeLast() - remmoves and returns the last song
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void clear()- clears the playlist
+    - void insertAt(int i, Song s) - appends at the end with addlast
+    - Song removeAt(int i)- removes the song in the queue.
+    - void move(int from, int to)- remove at from and then put at to.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, because of addLast and removeLast.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - The data type Song which contains the title artist and how long the song is in seconds.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I'm not sure.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't know
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Budget Tracker
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Models a lsit of transactions
+    - Kernel support: querey size, read and replace one transaction by index and push pop at the end.
+    - Secondary method compute total,  balance and more if there is time. Like potential finance reports
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - int size() - number of transaction
+    - Transaction get(int i) - report transaction at i
+    - Transaction set(int i) - replace at i and will return the previous transaction
+    -void addLast(Transaction t) - append a transaction at the end
+    -Transaction removeLast() - removes the last and returns it;
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void clear() - clears the list
+    - void insertAt(int i, Transaction t) - adds in the list
+    - Transaction removeAt(int i, Transaction t) -removes in the list
+    - void addIncome(double amount, String category, String date, String notes) - creates a transaction witha positive amount.
+    - void addExpenses(double amount, String category, String date, String note) creates Tranaction with negative amount showing money being taken
+    - double totalIncome()- total income
+    -double TotalExpense() - total amount spent
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, addLast allows it to be mutable because it is changin the size.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Transaction which is the transaction that was made.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - i don't know
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I'm not sure.
 
 ## Post-Assignment
 
