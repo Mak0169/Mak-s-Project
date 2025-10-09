@@ -6,8 +6,6 @@
 
 ## Assignment Overview
 
-<!-- TODO: read the assignment overview then delete this comment -->
-
 Previously, you brainstormed three ideas, and hopefully you got some feedback as
 well. However, it's impossible to know how reasonable your design actually is
 without trying to implement it. Because you're only just learning our full
@@ -113,7 +111,8 @@ new; then delete this comment -->
 I really want to do artificial neurons because I find it really interesting on how
 neural networks work, but it seems like a really hard task. So, if I find that
 artifical neurons is to hard because of the time constraint then I'm going to do
-the music playlist.
+the music playlist. But I am going to start out with a very basic concept of this
+so that I understand what is going on.
 
 > Once you've argued your choice of design, make a branch in your new repo called
 > something like `proof-of-concept`. There are many ways to do this, but my
@@ -123,8 +122,6 @@ the music playlist.
 > VSCode to run git commands. It's entirely up to you. Regardless of your choice,
 > we'll want a branch that you can later make a pull request from with all
 > your changes.
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
