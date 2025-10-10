@@ -187,15 +187,13 @@ will likely refine your design to make your implementation easier to use.
     - Model focuses on the weight of a neuron for a nerual network. Kernel focuses on inspecting and replacing a single weight, return size.
   - **Kernel Methods**:
     - int dimensions()- reports number of weights
-    - double getWeight(int i)- reports weight at i
-    - void setWeight(int i, double weight)- set weight at i
-    - double getBias()- reports current bias
-    - void setBias() - set the bias
+    - double computedWeightedSum(Sequence<Double> input, Sequence<Double> weights)- report sum of weights based off input and weight by executing a formula.
+
+    - int bias = 0.1;
     - double newinput(double[] x) - computes linear equation mx + b. m would be weight
   - **Secondary Methods**:
-    - double predictLinear(double[] x)- returns netInputs(x).
-    - void zero()- set all weights to 0
-    - void randomize(double min, double max) - set each weight and bias to a random value between the min and max.
+  - double sigmoidFunction(double x) - This computes the sigmoid function makes it so the the result of the sum is between 0 and 1 to introduce non linearity to the network.
+    - double train(Sequence<Integer> inputs, Sequence<Integer> weight, double bias, double target, double learningRate)- This will return a new bias and update all the weights in the sequence.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
