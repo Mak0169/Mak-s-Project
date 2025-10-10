@@ -6,7 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## [Unreleased]
+## [2025.10.9]
+
+- Added a main method int he proof-of-concept branch and coded a very basic
+- function that computes the weight using forward propagation and also computes
+- the sigmoid. I'll also paste the links here as well where I got the formulas from
+- and also the website has amazing information about the formulas and viusals.
+-
+- https://www.geeksforgeeks.org/artificial-intelligence/artificial-neural-networks-and-its-applications/
+- https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/
+- https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-function/
 
 ## [2024.12.30]
 
