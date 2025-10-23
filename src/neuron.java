@@ -1,7 +1,7 @@
 import components.sequence.Sequence;
 
 // Secondary interface that extends NeuronKernel.
-public interface neuron extends NeuronKernel {
+public interface Neuron extends NeuronKernel {
     double forwardPass(Sequence<Double> inputs, Sequence<Double> weights,
             double bias);
 
