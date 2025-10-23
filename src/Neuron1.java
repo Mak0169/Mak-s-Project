@@ -1,6 +1,6 @@
 import components.sequence.Sequence;
 
-public final class Neuron1 {
+public final class Neuron1 implements Neuron {
 
     // This will be the weight
     private final Sequence<Double> w;
@@ -17,7 +17,8 @@ public final class Neuron1 {
      *            the weight sequence
      * @return the weighted sum
      */
-    private static double computeWeightedSum(Sequence<Double> inputs,
+    @Override
+    public double computeWeightedSum(Sequence<Double> inputs,
             Sequence<Double> weights) {
         double sum = 0.0;
 
@@ -35,9 +36,10 @@ public final class Neuron1 {
         return sum;
     }
 
-    private static double forwardPass(Sequence<Double> inputs,
-            Sequence<Double> weights, double bias) {
-        double z = computeWeightedSum(inputs, weights) + bias;
+    @Override
+    public double forwardPass(Sequence<Double> inputs, Sequence<Double> weights,
+            double bias) {
+        double z = this.computeWeightedSum(inputs, weights) + bias;
         return sigmoidFunction(z);
     }
 
@@ -73,10 +75,10 @@ public final class Neuron1 {
      * @return the new bias
      * @updates weights
      */
-    private static double train(Sequence<Double> inputs,
-            Sequence<Double> weights, double bias, double target,
-            double learningRate) {
-        double output = forwardPass(inputs, weights, bias);
+    @Override
+    public double train(Sequence<Double> inputs, Sequence<Double> weights,
+            double bias, double target, double learningRate) {
+        double output = this.forwardPass(inputs, weights, bias);
 
         /*
          * This will compute the error, derivative, and delta for the
