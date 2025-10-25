@@ -1,12 +1,17 @@
 import components.sequence.Sequence;
+import components.sequence.Sequence1L;
 
 public final class Neuron1 implements Neuron {
 
-    // This will be the weight
-    private final Sequence<Double> w;
+    /**
+     * This will be for the weights.
+     */
+    private final Sequence<Double> w = new Sequence1L<>();
 
-    // This will be for the bias
-    private double b;
+    /**
+     * This will be for the bias.
+     */
+    private double b = 0.0;
 
     /**
      * This method computes the weighted sum of the inputs and weights.
@@ -18,9 +23,8 @@ public final class Neuron1 implements Neuron {
      * @return the weighted sum
      */
     @Override
-    public double computeWeightedSum(Sequence<Double> inputs,
-            Sequence<Double> weights) {
-        double sum = 0.0;
+    public double computeWeightedSum(Sequence<Double> x) {
+        double z = this.b;
 
         /*
          * This computes the summation of each input vector multiplied by its
@@ -30,17 +34,16 @@ public final class Neuron1 implements Neuron {
          * https://www.geeksforgeeks.org/machine-learning/backpropagation-in-
          * neural-network/
          */
-        for (int i = 0; i < inputs.length(); i++) {
-            sum += inputs.entry(i) * weights.entry(i);
+        for (int i = 0; i < this.w.length(); i++) {
+            z += this.w.entry(i) * x.entry(i);
         }
-        return sum;
+        return z;
     }
 
     @Override
-    public double forwardPass(Sequence<Double> inputs, Sequence<Double> weights,
-            double bias) {
-        double z = this.computeWeightedSum(inputs, weights) + bias;
-        return sigmoidFunction(z);
+    public double forwardPass(Sequence<Double> x) {
+
+        return sigmoidFunction(this.computeWeightedSum(x));
     }
 
     /**
@@ -78,7 +81,8 @@ public final class Neuron1 implements Neuron {
     @Override
     public double train(Sequence<Double> inputs, Sequence<Double> weights,
             double bias, double target, double learningRate) {
-        double output = this.forwardPass(inputs, weights, bias);
+        double z = this.computeWeightedSum(inputs);
+        double output = sigmoidFunction(z);
 
         /*
          * This will compute the error, derivative, and delta for the

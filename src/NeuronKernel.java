@@ -27,8 +27,7 @@ public interface NeuronKernel {
      * @param weights
      * @return teh weighted sum.
      */
-    double computeWeightedSum(Sequence<Double> inputs,
-            Sequence<Double> weights);
+    double computeWeightedSum(Sequence<Double> inputs);
 
     /**
      * Sets the weight at i.
