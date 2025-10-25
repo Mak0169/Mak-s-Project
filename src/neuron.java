@@ -1,10 +1,33 @@
 import components.sequence.Sequence;
 
-// Secondary interface that extends NeuronKernel.
+/**
+ * Secondary interface.
+ */
 public interface Neuron extends NeuronKernel {
+
+    /**
+     * Performs a forward pass.
+     *
+     * @param inputs
+     * @param weights
+     * @param bias
+     * @return the result after sigmoid function.
+     */
     double forwardPass(Sequence<Double> inputs, Sequence<Double> weights,
             double bias);
 
+    /**
+     * Trains the neuron with given inputs, weights, bias, targetm and leanring
+     * rate.
+     *
+     * @param inputs
+     * @param weights
+     * @param bias
+     * @param target
+     * @param learningRate
+     * @return the new bias.
+     * @updates weights
+     */
     double train(Sequence<Double> inputs, Sequence<Double> weights, double bias,
             double target, double learningRate);
 }

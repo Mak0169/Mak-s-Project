@@ -6,13 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
+## [2025.10.23]
+
+- Added 2 interfaces files to my project. One is the main interface with the second one
+being a secondary or sub interface that is used within the main interface.
+- The main interface is called NeuronKernel and the secondary interface is called Neuron.
+- Moved all the methods from main.java file to the Neuron1 class file.
+- Added javadoc comments.
+
 ## [2025.10.9]
 
-- Added a main method int he proof-of-concept branch and coded a very basic
-- function that computes the weight using forward propagation and also computes
-- the sigmoid. I'll also paste the links here as well where I got the formulas from
-- and also the website has amazing information about the formulas and viusals.
--
+- Added a main method int he proof-of-concept branch and coded a very basic function that computes the weight using forward propagation and also computes the sigmoid. I'll also paste the links here as well where I got the formulas from and also the website has amazing information about the formulas and viusals.
+
+  Here are the links I used for the formulas:
+
 - https://www.geeksforgeeks.org/artificial-intelligence/artificial-neural-networks-and-its-applications/
 - https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/
 - https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-function/
