@@ -12,6 +12,7 @@ the following form: YYYY.0M.0D.
 being a secondary or sub interface that is used within the main interface.
 - The main interface is called NeuronKernel and the secondary interface is called Neuron.
 - Moved all the methods from main.java file to the Neuron1 class file.
+- Added kernel methods to the neuron1 class file.
 - Added javadoc comments.
 
 ## [2025.10.9]
