@@ -100,4 +100,38 @@ public final class Neuron1 implements Neuron {
         double newBias = bias - learningRate * delta;
         return newBias;
     }
+
+    // These are the kernel methods that need to be implemented.
+    @Override
+    public int size() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'size'");
+    }
+
+    @Override
+    public double weight(int i) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'weight'");
+    }
+
+    @Override
+    public void setWeights(int i, double w) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'setWeights'");
+    }
+
+    @Override
+    public double bias() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'bias'");
+    }
+
+    @Override
+    public void setBias(double b) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'setBias'");
+    }
 }
