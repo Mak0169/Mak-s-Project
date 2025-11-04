@@ -13,6 +13,10 @@ public final class Neuron1 implements Neuron {
      */
     private double b = 0.0;
 
+    public Neuron1(int i) {
+        //TODO Auto-generated constructor stub
+    }
+
     /**
      * This method computes the weighted sum of the inputs and weights.
      *

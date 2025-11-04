@@ -9,7 +9,7 @@
  */
 public class main {
     public static void main(String[] args) {
+        Neuron1 neuron = new Neuron1(2);
 
-        // going to figure this part out soon.
     }
 }
