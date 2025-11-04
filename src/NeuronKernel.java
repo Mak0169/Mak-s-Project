@@ -1,9 +1,10 @@
 import components.sequence.Sequence;
+import components.standard.Standard;
 
 /**
  * Main interface for neuron.
  */
-public interface NeuronKernel {
+public interface NeuronKernel extends Standard<NeuronKernel> {
 
     /**
      * Returns the size of the neuron.
