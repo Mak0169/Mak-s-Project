@@ -1,20 +1,24 @@
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 
-public final class Neuron1 implements Neuron {
+public final class Neuron1 extends NeuronSecondary {
 
     /**
      * This will be for the weights.
      */
-    private final Sequence<Double> w = new Sequence1L<>();
+    private final Sequence<Double> w;
 
     /**
      * This will be for the bias.
      */
-    private double b = 0.0;
+    private double b;
 
-    public Neuron1(int i) {
-        //TODO Auto-generated constructor stub
+    public Neuron1(int n) {
+        this.w = new Sequence1L<Double>();
+        for (int i = 0; i < n; i++) {
+            this.w.add(this.w.length(), 0.0);
+        }
+        this.b = 0.0;
     }
 
     /**
@@ -46,7 +50,6 @@ public final class Neuron1 implements Neuron {
 
     @Override
     public double forwardPass(Sequence<Double> x) {
-
         return sigmoidFunction(this.computeWeightedSum(x));
     }
 
@@ -105,7 +108,6 @@ public final class Neuron1 implements Neuron {
         return newBias;
     }
 
-    // These are the kernel methods that need to be implemented.
     @Override
     public int size() {
         return this.w.length();
@@ -130,4 +132,5 @@ public final class Neuron1 implements Neuron {
     public void setBias(double b) {
         this.b = b;
     }
+
 }
