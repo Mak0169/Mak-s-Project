@@ -21,6 +21,31 @@ public final class Neuron1 extends NeuronSecondary {
         this.b = 0.0;
     }
 
+    @Override
+    public int size() {
+        return this.w.length();
+    }
+
+    @Override
+    public double weight(int i) {
+        return this.w.entry(i);
+    }
+
+    @Override
+    public void setWeights(int i, double w) {
+        this.w.replaceEntry(i, w);
+    }
+
+    @Override
+    public double bias() {
+        return this.b;
+    }
+
+    @Override
+    public void setBias(double b) {
+        this.b = b;
+    }
+
     /**
      * This method computes the weighted sum of the inputs and weights.
      *
@@ -46,49 +71,5 @@ public final class Neuron1 extends NeuronSecondary {
             z += this.w.entry(i) * x.entry(i);
         }
         return z;
-    }
-
-    @Override
-    public double forwardPass(Sequence<Double> x) {
-        return this.sigmoidFunction(this.computeWeightedSum(x));
-    }
-
-    /**
-     * This is a link going to where I got the function for this method.
-     * https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-
-     * function/
-     *
-     * @param x
-     *            the input value
-     * @return the output value between 0 and 1
-     */
-    @Override
-    protected double sigmoidFunction(double x) {
-        return 1.0 / (1.0 + Math.exp(-x));
-    }
-
-    @Override
-    public int size() {
-        return this.w.length();
-    }
-
-    @Override
-    public double weight(int i) {
-        return this.w.entry(i);
-    }
-
-    @Override
-    public void setWeights(int i, double w) {
-        this.w.replaceEntry(i, w);
-    }
-
-    @Override
-    public double bias() {
-        return this.b;
-    }
-
-    @Override
-    public void setBias(double b) {
-        this.b = b;
     }
 }

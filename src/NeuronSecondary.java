@@ -36,6 +36,7 @@ public abstract class NeuronSecondary implements Neuron {
      * @return the new bias
      * @updates weights
      */
+    @Override
     public double train(Sequence<Double> inputs, double target,
             double learningRate) {
         double z = this.computeWeightedSum(inputs);
@@ -59,5 +60,22 @@ public abstract class NeuronSecondary implements Neuron {
         return num * (output - target) * (output - target);
     }
 
-    protected abstract double sigmoidFunction(double z);
+    /**
+     * This is a link going to where I got the function for this method.
+     * https://www.geeksforgeeks.org/machine-learning/derivative-of-the-sigmoid-
+     * function/
+     *
+     * @param x
+     *            the input value
+     * @return the output value between 0 and 1
+     */
+    @Override
+    protected double sigmoidFunction(double x) {
+        return 1.0 / (1.0 + Math.exp(-x));
+    }
+
+    @Override
+    public double forwardPass(Sequence<Double> x) {
+        return this.sigmoidFunction(this.computeWeightedSum(x));
+    }
 }
