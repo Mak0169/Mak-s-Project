@@ -1,3 +1,6 @@
+import components.sequence.Sequence;
+import components.sequence.Sequence1L;
+
 /**
  * This is the link to where I got the formula for this project.
  * https://www.geeksforgeeks.org/artificial-intelligence/artificial-neural
@@ -23,6 +26,17 @@ public class main {
 
         double[][] X = { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } };
         double[] y = { 0, 0, 0, 1 };
+        double lr = 0.1;
+
+        for (int epoch = 0; epoch < 2000; epoch++) {
+            double loss = 0.0;
+            for (int i = 0; i < X.length; i++) {
+                Sequence<Double> inputs = new Sequence1L<>();
+                inputs.add(0, X[i][0]);
+                inputs.add(1, X[i][1]);
+                loss += neuron.train(X, y[i], lr);
+            }
+        }
 
     }
 }

@@ -36,11 +36,10 @@ public abstract class NeuronSecondary implements Neuron {
      * @return the new bias
      * @updates weights
      */
-    @Override
     public double train(Sequence<Double> inputs, double target,
             double learningRate) {
         double z = this.computeWeightedSum(inputs);
-        double output = sigmoidFunction(z);
+        double output = this.sigmoidFunction(z);
         final double num = 0.5;
 
         /*
@@ -59,4 +58,6 @@ public abstract class NeuronSecondary implements Neuron {
         this.setBias(this.bias() - learningRate * delta);
         return num * (output - target) * (output - target);
     }
+
+    protected abstract double sigmoidFunction(double z);
 }

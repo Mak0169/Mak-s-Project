@@ -50,7 +50,7 @@ public final class Neuron1 extends NeuronSecondary {
 
     @Override
     public double forwardPass(Sequence<Double> x) {
-        return sigmoidFunction(this.computeWeightedSum(x));
+        return this.sigmoidFunction(this.computeWeightedSum(x));
     }
 
     /**
@@ -62,7 +62,8 @@ public final class Neuron1 extends NeuronSecondary {
      *            the input value
      * @return the output value between 0 and 1
      */
-    private static double sigmoidFunction(double x) {
+    @Override
+    protected double sigmoidFunction(double x) {
         return 1.0 / (1.0 + Math.exp(-x));
     }
 
@@ -90,5 +91,4 @@ public final class Neuron1 extends NeuronSecondary {
     public void setBias(double b) {
         this.b = b;
     }
-
 }
