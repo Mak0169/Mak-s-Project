@@ -40,7 +40,7 @@ public abstract class NeuronSecondary implements Neuron {
     public double train(Sequence<Double> inputs, double target,
             double learningRate) {
         double z = this.computeWeightedSum(inputs);
-        double output = this.sigmoidFunction(z);
+        double output = sigmoidFunction(z);
         final double num = 0.5;
 
         /*
@@ -69,13 +69,12 @@ public abstract class NeuronSecondary implements Neuron {
      *            the input value
      * @return the output value between 0 and 1
      */
-    @Override
-    protected double sigmoidFunction(double x) {
+    protected static double sigmoidFunction(double x) {
         return 1.0 / (1.0 + Math.exp(-x));
     }
 
     @Override
     public double forwardPass(Sequence<Double> x) {
-        return this.sigmoidFunction(this.computeWeightedSum(x));
+        return sigmoidFunction(this.computeWeightedSum(x));
     }
 }

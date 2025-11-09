@@ -11,6 +11,7 @@ import components.sequence.Sequence1L;
  * This program will simulate a single neuron in an artificial neuralk network.
  */
 public class main {
+
     public static void main(String[] args) {
         /**
          * Creating a neuron with 2 inputs. Also, creating a matrix for the
@@ -26,15 +27,24 @@ public class main {
 
         double[][] X = { { 0, 0 }, { 0, 1 }, { 1, 0 }, { 1, 1 } };
         double[] y = { 0, 0, 0, 1 };
-        double lr = 0.1;
+        final double lr = 0.1;
+        final int trainLimit = 2000;
+        final int statCheck = 200;
+        final int nums = 0;
 
-        for (int epoch = 0; epoch < 2000; epoch++) {
+        for (int cycles = 0; cycles < trainLimit; cycles++) {
             double loss = 0.0;
             for (int i = 0; i < X.length; i++) {
                 Sequence<Double> inputs = new Sequence1L<>();
                 inputs.add(0, X[i][0]);
                 inputs.add(1, X[i][1]);
-                loss += neuron.train(X, y[i], lr);
+                loss += neuron.train(inputs, y[i], lr);
+            }
+            if (cycles % statCheck == nums) {
+                System.out.printf(
+                        "epoch %d loss = %.4f bias = %.3f w = [%.3f, %.3f]%n",
+                        cycles, loss, neuron.bias(), neuron.weight(0),
+                        neuron.weight(1));
             }
         }
 
