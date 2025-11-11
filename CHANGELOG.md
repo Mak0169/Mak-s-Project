@@ -5,7 +5,8 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
-
+## [2025.11.9]
+-
 ## [2025.11.7]
 - Major changes to my project. First I added a abstract class method where I move some of my methods like train, sigmoid function, fowardPass, and some unimplemented methods in.
 - Had to redo the train method as I am starting to do the main method, I read further into this document about "training" https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/. So basically the actual training portion of my "Network" even though its only 2 neurons that I am training. The hardest part about the training in the main class was actually understanding the documentation. So in the documentation its done in python with probably a bunch of libraries that I can't use in java. So it took me a long time to do this.

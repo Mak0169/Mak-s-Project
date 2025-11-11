@@ -27,5 +27,4 @@ public interface Neuron extends NeuronKernel {
          */
         double train(Sequence<Double> inputs, double target,
                         double learningRate);
-
 }

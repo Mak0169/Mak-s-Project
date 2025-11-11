@@ -72,4 +72,24 @@ public final class Neuron1 extends NeuronSecondary {
         }
         return z;
     }
+
+    @Override
+    public void clear() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'clear'");
+    }
+
+    @Override
+    public NeuronKernel newInstance() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'newInstance'");
+    }
+
+    @Override
+    public void transferFrom(NeuronKernel source) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'transferFrom'");
+    }
 }

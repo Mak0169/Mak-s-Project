@@ -1,26 +1,6 @@
 import components.sequence.Sequence;
 
 public abstract class NeuronSecondary implements Neuron {
-    @Override
-    public void clear() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'clear'");
-    }
-
-    @Override
-    public NeuronKernel newInstance() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException(
-                "Unimplemented method 'newInstance'");
-    }
-
-    @Override
-    public void transferFrom(NeuronKernel arg0) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException(
-                "Unimplemented method 'transferFrom'");
-    }
-
     /**
      * This method will return a new Bias after updating the weights in-place.
      * https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/
