@@ -57,4 +57,24 @@ public abstract class NeuronSecondary implements Neuron {
     public double forwardPass(Sequence<Double> x) {
         return sigmoidFunction(this.computeWeightedSum(x));
     }
+
+    @Override
+    public void clear() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'clear'");
+    }
+
+    @Override
+    public NeuronKernel newInstance() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'newInstance'");
+    }
+
+    @Override
+    public void transferFrom(NeuronKernel source) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException(
+                "Unimplemented method 'transferFrom'");
+    }
 }
