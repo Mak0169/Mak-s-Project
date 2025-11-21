@@ -51,4 +51,13 @@ public interface NeuronKernel extends Standard<NeuronKernel> {
      * @param b
      */
     void setBias(double b);
+
+    @Override
+    void clear();
+
+    @Override
+    NeuronKernel newInstance();
+
+    @Override
+    void transferFrom(NeuronKernel source);
 }

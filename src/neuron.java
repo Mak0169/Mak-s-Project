@@ -20,13 +20,11 @@ public interface Neuron extends NeuronKernel {
          * leanring rate.
          *
          * @param inputs
-         * @param weights
-         * @param bias
          * @param target
          * @param learningRate
          * @return the new bias.
          * @updates weights
          */
-        double train(Sequence<Double> inputs, Sequence<Double> weights,
-                        double bias, double target, double learningRate);
+        double train(Sequence<Double> inputs, double target,
+                        double learningRate);
 }

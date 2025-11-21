@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
+## [2025.11.9]
+-
+## [2025.11.7]
+- Major changes to my project. First I added a abstract class method where I move some of my methods like train, sigmoid function, fowardPass, and some unimplemented methods in.
+- Created a Secondary Neuron class that implements the Neuron interface. This class is used by the main Neuron1 class to encapsulate some of the methods so that neuron1 is more readable.
+- Had to redo the train method as I am starting to do the main method, I read further into this document about "training" https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/. So basically the actual training portion of my "Network" even though its only 2 neurons that I am training. The hardest part about the training in the main class was actually understanding the documentation. So in the documentation its done in python with probably a bunch of libraries that I can't use in java. So it took me a long time to do this.
+  ## To break down what is happening in the main method:
+    - ![alt text](image.png)
+    GeeksforGeeks is where I got this image from scroll all the way to the bottom https://www.geeksforgeeks.org/machine-learning/backpropagation-in-neural-network/
+
+    - I was using this image as a sort of backbone of what I needed to do for my training portion because honestly I had zero idea how I was going to do this. I have zero background knowledge prior to doing this project so I need some refrences.
+    - The variable X is a 2D list representing basically a truth table. You learn the basics of this in foundations 1 at Ohio State University or in Discrete Math if you are at a different university. In short this training is solving an XOR problem. We want our results to basically be as close to the results of this truth table.
+    - The next big challege was how I was going to put the data into a "Sequence" since that is the data structure I am using for this project. So what I did was for every cycle it adds the numbers from the 2D list into a sequence and will do it four times every cycle. It will then train on each pair and add to the loss of each training. After its completes the training, it will create a new sequence every time so each input gets a clean empty sequence.
 
 ## [2025.10.23]
 
