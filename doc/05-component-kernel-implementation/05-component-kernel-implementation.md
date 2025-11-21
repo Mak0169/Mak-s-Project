@@ -40,8 +40,6 @@ examples of these.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -120,7 +118,8 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+      I implemented Neuron1 by using a Sequence to store the weights of my neuron. I chose a Sequence because first, its a OSU component data structure that I understand the most. Secondly, its efficent and matches the implementation I want for my neuron project. I basically want to be able to constantly update the weights at specific indexes which Sequence is able to do.
+         Some of the restriction I am considering is putting range checkers into my implmentation so that it doesn't go above or below a certain number when doing kernel implementation. Added requirements to variables like weight so that its in a certain range. Added checks so that the length of the Sequence is equal to the number of inputs I think that is very important for this implementation.
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
@@ -141,8 +140,6 @@ Below is further rationale/explanation for the rubric items above:
 > to see them. If you don't like this workflow, you may try following the
 > rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 > and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
-
-<!-- TODO: make a new branch from main then delete this comment -->
 
 ## Assignment Tasks
 
