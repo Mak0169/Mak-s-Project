@@ -28,11 +28,13 @@ public final class Neuron1 extends NeuronSecondary {
 
     @Override
     public double weight(int i) {
+        this.rangeCheck(i);
         return this.w.entry(i);
     }
 
     @Override
     public void setWeights(int i, double w) {
+        this.rangeCheck(i);
         this.w.replaceEntry(i, w);
     }
 
@@ -71,6 +73,18 @@ public final class Neuron1 extends NeuronSecondary {
             z += this.w.entry(i) * x.entry(i);
         }
         return z;
+    }
+
+    /**
+     * This checks the index of the weight to make sure it is in range.
+     *
+     * @param i
+     */
+    private void rangeCheck(double i) {
+        if (i < 0 || i > this.w.length()) {
+            throw new IndexOutOfBoundsException("The value: " + i
+                    + " is outside between [0, " + (this.w.length() - 1) + "]");
+        }
     }
 
 }
