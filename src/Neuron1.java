@@ -4,10 +4,13 @@ import components.sequence.Sequence1L;
 /**
  * Neuron implementation using OSU's components.
  *
- * @Convention w != null and w.length() > 0
- *
- * @correspondence size() = w.length() and for all i starting fromt 0 to size()
+ * @Convention <pre>
+ * w != null and w.length() > 0
+ * </pre>
+ * @correspondence <pre>
+ * size() = w.length() and for all i starting fromt 0 to size()
  *                 weight(i) = w.entry(i) and bias() = b
+ * </pre>
  */
 public final class Neuron1 extends NeuronSecondary {
 

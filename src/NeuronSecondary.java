@@ -1,5 +1,19 @@
 import components.sequence.Sequence;
 
+/**
+ * Abstract secondary class implementation.
+ *
+ * @convention <pre>
+ *  [All of the kernel methods of $this satisfy their representation
+ *  invariants.]
+ * </pre>
+ * @correspondence <pre>
+ *  $this = the weights and bias of the neuron
+ *  size() = number of inputs to the nueron
+ *  weight(i) = i represents the weight at index i
+ *  bias() = the bias of the nueron
+ * </pre>
+ */
 public abstract class NeuronSecondary implements Neuron {
     /**
      * This method will return a new Bias after updating the weights in-place.
