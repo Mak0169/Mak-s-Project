@@ -1,4 +1,4 @@
-package component;
+package components.neuron;
 
 import components.sequence.Sequence;
 
@@ -11,6 +11,7 @@ public interface Neuron extends NeuronKernel {
          * Performs a forward pass.
          *
          * @param inputs
+         *                the input sequence
          * @return the result after sigmoid function.
          */
         double forwardPass(Sequence<Double> inputs);

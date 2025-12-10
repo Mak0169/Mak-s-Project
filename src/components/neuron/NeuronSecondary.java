@@ -1,4 +1,4 @@
-package component;
+package components.neuron;
 
 import components.sequence.Sequence;
 

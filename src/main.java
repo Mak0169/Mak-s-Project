@@ -1,4 +1,4 @@
-import component.Neuron1;
+import components.neuron.Neuron1;
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 

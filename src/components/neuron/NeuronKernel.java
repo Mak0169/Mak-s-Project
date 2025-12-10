@@ -1,4 +1,4 @@
-package component;
+package components.neuron;
 
 import components.sequence.Sequence;
 import components.standard.Standard;
@@ -27,8 +27,7 @@ public interface NeuronKernel extends Standard<NeuronKernel> {
      * Computes the weighted sum of inputs and weights.
      *
      * @param inputs
-     * @param weights
-     * @return teh weighted sum.
+     * @return the weighted sum.
      */
     double computeWeightedSum(Sequence<Double> inputs);
 
