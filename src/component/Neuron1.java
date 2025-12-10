@@ -1,3 +1,5 @@
+package component;
+
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 
@@ -70,10 +72,8 @@ public final class Neuron1 extends NeuronSecondary {
     /**
      * This method computes the weighted sum of the inputs and weights.
      *
-     * @param inputs
+     * @param x
      *            the input sequence
-     * @param weights
-     *            the weight sequence
      * @return the weighted sum
      */
     @Override

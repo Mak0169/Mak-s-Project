@@ -1,3 +1,5 @@
+package component;
+
 import components.sequence.Sequence;
 import components.standard.Standard;
 
