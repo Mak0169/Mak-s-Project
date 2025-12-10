@@ -1,5 +1,19 @@
 import components.sequence.Sequence;
 
+/**
+ * Abstract secondary class implementation.
+ *
+ * @convention <pre>
+ *  [All of the kernel methods of $this satisfy their representation
+ *  invariants.]
+ * </pre>
+ * @correspondence <pre>
+ *  $this = the weights and bias of the neuron
+ *  size() = number of inputs to the nueron
+ *  weight(i) = i represents the weight at index i
+ *  bias() = the bias of the nueron
+ * </pre>
+ */
 public abstract class NeuronSecondary implements Neuron {
     /**
      * This method will return a new Bias after updating the weights in-place.
@@ -60,21 +74,29 @@ public abstract class NeuronSecondary implements Neuron {
 
     @Override
     public void clear() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'clear'");
+        for (int i = 0; i < this.size(); i++) {
+            this.setWeights(i, 0.0);
+        }
+        this.setBias(0.0);
     }
 
     @Override
     public NeuronKernel newInstance() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException(
-                "Unimplemented method 'newInstance'");
+        return new Neuron1(this.size());
     }
 
     @Override
     public void transferFrom(NeuronKernel source) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException(
-                "Unimplemented method 'transferFrom'");
+        if (source == this) {
+            throw new IllegalArgumentException("Cannot transfer self");
+        }
+        if (source.size() != this.size()) {
+            throw new IllegalArgumentException("sizes are mismatched");
+        }
+        for (int i = 0; i < this.size(); i++) {
+            this.setWeights(i, source.weight(i));
+        }
+        this.setBias(source.bias());
+        source.clear();
     }
 }
