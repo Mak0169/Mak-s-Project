@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36" version="29.2.7">
+  <diagram name="Page-1" id="X9bozwI9FVoojAh2toKR">
+    <mxGraphModel dx="1701" dy="1035" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-1" parent="1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;NeuronKernel&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="325" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-3" parent="1" style="html=1;whiteSpace=wrap;" value="«interface»&lt;br&gt;&lt;b&gt;Neuron&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="325" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-5" parent="1" style="html=1;whiteSpace=wrap;" value="«Abstract Class»&lt;br&gt;&lt;b&gt;NeuronSecondary&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="325" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-7" parent="1" style="html=1;whiteSpace=wrap;" value="&lt;br&gt;&lt;b&gt;Neuron1&lt;/b&gt;" vertex="1">
+          <mxGeometry height="80" width="200" x="325" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-8" edge="1" parent="1" source="Gw5fDx1CJHo09HxqPgDx-7" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Gw5fDx1CJHo09HxqPgDx-5" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="350" y="530" as="sourcePoint" />
+            <mxPoint x="510" y="530" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-9" edge="1" parent="1" source="Gw5fDx1CJHo09HxqPgDx-5" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Gw5fDx1CJHo09HxqPgDx-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="450" y="370" as="sourcePoint" />
+            <mxPoint x="610" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Gw5fDx1CJHo09HxqPgDx-11" edge="1" parent="1" source="Gw5fDx1CJHo09HxqPgDx-3" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="Gw5fDx1CJHo09HxqPgDx-1" value="Extends">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="520" y="210" as="sourcePoint" />
+            <mxPoint x="680" y="210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
