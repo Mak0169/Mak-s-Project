@@ -5,8 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
-## [2025.11.9]
--
+
+## [2025.12.8]
+- Created a informal UML diagram of my component. I used a application called draw.io, but there are other and better choices out there then what I used. This was just a free website. The reason I say its informal is because I didn't list any description about the classes like what methods and parameters they take.
+
+## [2025.12.5]
+- Created the convention and correspodance for my classes. Also, I don't have a strong skill in making these but I tried my best. I'm not sure if you learn this in software 1 at OSU.
+
+## [2025.11.20]
+- I created a method which checks the range of the index the weights are being placed in. I'm not sure if it will ever go out of bounds but in the chance that it does it will throw an exception when it does that.
+- Also Getting result from my project and it seems like my results are doing the correct updating of the weights though I'm getting a pretty big numbers for my bias which seem okay since they get lower after a certain number of cycles.
+
 ## [2025.11.7]
 - Major changes to my project. First I added a abstract class method where I move some of my methods like train, sigmoid function, fowardPass, and some unimplemented methods in.
 - Created a Secondary Neuron class that implements the Neuron interface. This class is used by the main Neuron1 class to encapsulate some of the methods so that neuron1 is more readable.

@@ -1,6 +1,17 @@
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 
+/**
+ * Neuron implementation using OSU's components.
+ *
+ * @Convention <pre>
+ * w != null and w.length() > 0
+ * </pre>
+ * @correspondence <pre>
+ * size() = w.length() and for all i starting fromt 0 to size()
+ *                 weight(i) = w.entry(i) and bias() = b
+ * </pre>
+ */
 public final class Neuron1 extends NeuronSecondary {
 
     /**
@@ -13,6 +24,14 @@ public final class Neuron1 extends NeuronSecondary {
      */
     private double b;
 
+    /**
+     * Constructor for Neuron1.
+     *
+     * @param n
+     *            the number of weights
+     * @ensures this.size() = n and for all i starting from 0 to n,
+     *          this.weight(i) = 0.0 and this.bias() = 0.0
+     */
     public Neuron1(int n) {
         this.w = new Sequence1L<Double>();
         for (int i = 0; i < n; i++) {
@@ -28,11 +47,13 @@ public final class Neuron1 extends NeuronSecondary {
 
     @Override
     public double weight(int i) {
+        this.rangeCheck(i);
         return this.w.entry(i);
     }
 
     @Override
     public void setWeights(int i, double w) {
+        this.rangeCheck(i);
         this.w.replaceEntry(i, w);
     }
 
@@ -71,6 +92,21 @@ public final class Neuron1 extends NeuronSecondary {
             z += this.w.entry(i) * x.entry(i);
         }
         return z;
+    }
+
+    /**
+     * This checks the index of the weight to make sure it is in range.
+     *
+     * @param i
+     *            the index to check
+     * @throws IndexOutOfBoundsException
+     *             when i is less than 0 or greater than w.length() - 1
+     */
+    private void rangeCheck(double i) {
+        if (i < 0 || i > this.w.length()) {
+            throw new IndexOutOfBoundsException("The value: " + i
+                    + " is outside between [0, " + (this.w.length() - 1) + "]");
+        }
     }
 
 }
