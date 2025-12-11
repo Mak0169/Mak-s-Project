@@ -305,18 +305,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+After completing this project I have a much better understanding of software development. At the beginning I really didn't have a good grip on what software development was all together. I had prior experiences at Miami university where I created a game with a group of people but I didn't really get to learn much making that game or understand fully what software development was like.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+As I spoke above I had some prior experiences at my preivous institution, but I didn't really get the experience I wanted out of that project. But, this project has really helped me understand software development.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+Software development is something I am not particularly interested in. But i will say that I had lots of fun building this project. I don't have an interest in software development because building this type of application or software in general doesn't grab my attention. I learned a lot from this project and I think that is the most important part.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -324,25 +324,27 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Building the habit of being okay with not knowing. With cs projects its usually something that you already are familiar with in a sense and that you wouldn't neccesary have to be looking at a ton of documents maybe the OSU Components page. But with this project I had to read a lot of documents and videos to understand why something is. So I think being okay with not knowing and that struggling means that you are doing something meaningful.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+For my project specifically.
+- implemented a simple neural network from scratch, calculatiing and updating weights through trianing using java.
+- Coded neuron's forward pass, loss calculation, and weight-update loop from scratch to reinforce mathematical foundation of neural network.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I would say that I am more interested in it especially the mathematical side of neural networks. I think this project was very valuable for my personal development because it was the first project that I actually stuck with and actually finished which I am very proud of.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I recently gained interest in operating systems and a little bit of distributed systems. How scheduling works as well as memory management etc kind sparked an interest for me. So I think doing this along with some interest in AI I think will be a great combination for me for the future.
 
 ### Changelog
 
@@ -365,8 +367,8 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed test suite for <!-- insert name of component here --> component
-- Designed two different use cases for <!-- insert name of component here --> component
+- Designed test suite for Neuron component
+- Designed two different use cases for Neuron component
 
 ### Updated
 
