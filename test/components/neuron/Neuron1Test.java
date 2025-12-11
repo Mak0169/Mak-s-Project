@@ -3,7 +3,7 @@ package components.neuron;
 public class Neuron1Test extends NeuronTest {
 
     @Override
-    protected final Neuron constructorNeuron(int n) {
+    protected final Neuron constructorTest(int n) {
         return new Neuron1(n);
     }
 
