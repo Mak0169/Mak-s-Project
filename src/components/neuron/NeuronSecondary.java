@@ -70,12 +70,12 @@ public abstract class NeuronSecondary implements Neuron {
     }
 
     @Override
-    public double forwardPass(Sequence<Double> x) {
+    public final double forwardPass(Sequence<Double> x) {
         return sigmoidFunction(this.computeWeightedSum(x));
     }
 
     @Override
-    public void clear() {
+    public final void clear() {
         for (int i = 0; i < this.size(); i++) {
             this.setWeights(i, 0.0);
         }
@@ -83,12 +83,12 @@ public abstract class NeuronSecondary implements Neuron {
     }
 
     @Override
-    public NeuronKernel newInstance() {
+    public final NeuronKernel newInstance() {
         return new Neuron1(this.size());
     }
 
     @Override
-    public void transferFrom(NeuronKernel source) {
+    public final void transferFrom(NeuronKernel source) {
         if (source == this) {
             throw new IllegalArgumentException("Cannot transfer self");
         }

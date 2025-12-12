@@ -5,6 +5,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
+
+## [2025.12.9]
+- Created two test classes that test neuron some of the kernel methods. Also, created antoher use case for my component which is basically to calculate the forward pass.
+- Also I did some minor fixes in all of my class for my component like fix the comments for my methods. Also my second use case example is honestly not that good I really wish that I could come up with something better. The issue that I am having is that this component isn't the most useful component I would compared to other peoples projects that I was talking to students about. Maybe I need to be be more creative with what I can do with my component. I'm also not the best with setting up test cases so I kind of set it up very similar to NaturalNumber component or project 2 I think.
 ## [2025.11.20]
 - I created a method which checks the range of the index the weights are being placed in. I'm not sure if it will ever go out of bounds but in the chance that it does it will throw an exception when it does that.
 - Also Getting result from my project and it seems like my results are doing the correct updating of the weights though I'm getting a pretty big numbers for my bias which seem okay since they get lower after a certain number of cycles.
