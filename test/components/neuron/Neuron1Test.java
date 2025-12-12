@@ -1,5 +1,8 @@
 package components.neuron;
 
+/**
+ * Test class for Neuron1.
+ */
 public class Neuron1Test extends NeuronTest {
 
     @Override

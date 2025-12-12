@@ -28,6 +28,12 @@ public abstract class NeuronTest {
      */
     protected abstract Neuron constructorRef(int n);
 
+    /**
+     * Constructs and returns a sequence of the given values.
+     *
+     * @param values
+     * @return Sequence of given values
+     */
     protected Sequence<Double> seq(Double[] values) {
         Sequence<Double> s = new Sequence1L<Double>();
         for (double v : values) {
@@ -84,6 +90,38 @@ public abstract class NeuronTest {
      */
     @Test
     public void testSigmoidMatchesRef() {
+        final double val = 0.5;
+        final double val2 = 1.0;
+        final double val3 = 0.2;
+        final double val4 = 3.0;
+        Neuron n = this.constructorTest(2);
+        Neuron ref = this.constructorRef(2);
+        n.setWeights(0, val);
+        n.setWeights(1, val2);
+        n.setBias(val3);
+        ref.setWeights(0, val);
+        ref.setWeights(1, val2);
+        ref.setBias(val3);
+        Sequence<Double> x = this.seq(new Double[] { 2.0, val4 });
+        assertEquals(ref.forwardPass(x), n.forwardPass(x), 0.0);
+    }
+
+    /**
+     * Test setBias and bias methods.
+     */
+    @Test
+    public void testSetAndGetBias() {
+        final double val = 0.5;
+        Neuron n = this.constructorTest(2);
+        n.setBias(val);
+        assertEquals(val, n.bias(), 0.0);
+    }
+
+    /**
+     * Test forwardPass method against reference implementation.
+     */
+    @Test
+    public void testForwardPassMatchesRef() {
         final double val = 0.5;
         final double val2 = 1.0;
         final double val3 = 0.2;

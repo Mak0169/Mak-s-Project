@@ -8,10 +8,16 @@ import components.sequence.Sequence1L;
  * -networks-and-its-applications/
  */
 
-/*
- * This program will simulate a single neuron in an artificial neuralk network.
+/**
+ * This program will simulate a single neuron in an artificial neural network.
  */
-public class main {
+public final class mainDemo {
+
+    /**
+     * Constructor for main class.
+     */
+    private mainDemo() {
+    }
 
     public static void main(String[] args) {
         /**

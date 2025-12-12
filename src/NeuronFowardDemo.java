@@ -3,7 +3,21 @@ import components.neuron.Neuron1;
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 
-public class NeuronFowardDemo {
+/**
+ * A simple demo of computing the forward pass using neuron component.
+ */
+public final class NeuronFowardDemo {
+    /**
+     * Private constructor to prevent instantiation.
+     */
+    private NeuronFowardDemo() {
+    }
+
+    /**
+     * Main method to demo the forward pass using neuron component.
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Neuron n = new Neuron1(3);
         n.setWeights(0, 0.5);
