@@ -53,6 +53,16 @@ public abstract class NeuronTest {
     }
 
     /**
+     * Test constructor and size method with zero size.
+     */
+    @Test
+    public void testConstructorSizeZero() {
+        final int size = 0;
+        Neuron n = this.constructorTest(size);
+        assertEquals(size, n.size());
+    }
+
+    /**
      * Test setWeights and weight methods.
      */
     @Test
@@ -118,7 +128,7 @@ public abstract class NeuronTest {
     }
 
     /**
-     * Test forwardPass method against reference implementation.
+     * Test forwardPass method against reference.
      */
     @Test
     public void testForwardPassMatchesRef() {
@@ -135,6 +145,27 @@ public abstract class NeuronTest {
         ref.setWeights(1, val2);
         ref.setBias(val3);
         Sequence<Double> x = this.seq(new Double[] { 2.0, val4 });
+        assertEquals(ref.forwardPass(x), n.forwardPass(x), 0.0);
+    }
+
+    /**
+     * Test forwardPass method against reference with zero input.
+     */
+    @Test
+    public void testForwardPassMatchesRefZero() {
+        final double val = 0.5;
+        final double val2 = 1.0;
+        final double val3 = 0.2;
+        final double val4 = 3.0;
+        Neuron n = this.constructorTest(2);
+        Neuron ref = this.constructorRef(2);
+        n.setWeights(0, val);
+        n.setWeights(1, val2);
+        n.setBias(val3);
+        ref.setWeights(0, val);
+        ref.setWeights(1, val2);
+        ref.setBias(val3);
+        Sequence<Double> x = this.seq(new Double[] { 0.0, 0.0 });
         assertEquals(ref.forwardPass(x), n.forwardPass(x), 0.0);
     }
 }
